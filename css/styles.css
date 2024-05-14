@@ -1,49 +1,105 @@
 
-.nav-item.nav-link {
-    color: #0066d39a; 
-    font-weight: bold; 
-    font-family: ubuntu;
+
+/* Define colors as CSS variables */
+:root {
+    --primary-background-color: #ffffff; /* White */
+    --secondary-background-color: #00000000; /* Very light gray */
+    --text-color: #000000; /* Dark gray for text */
+    --secondary-text-color: #2c2c2c;
+    --accent-color: #000000; /* Your accent color */
+    --hover-color: #217cbd; /* Hover color */
+    --link-color: #000000; /* Link color */
+    --hover-link-color: #385cbd; /* Hover link color */
+    --border-color: #CCCCCC; /* Light gray for borders */
+    }
+
+/* Use the defined colors */
+body {
+    background-color: var(--primary-background-color);
+    color: var(--text-color);
+    border-style: none;
+    font-family: sans-serif;
+    font-family: 'Source Sans Pro', sans-serif; }
+
+.container {
+    background-color: var(--secondary-background-color);
+    border: 1px solid var(--border-color);
+    border-style: none; }
+
+a { color: var(--link-color); }
+
+a:hover { color: var(--hover-link-color); }
+
+.navbar-brand {
+    margin-right: 3rem;
 }
 
+.nav-item.nav-link {
+    color: var(--accent-color);
+    text-transform: lowercase;
+    font-weight: lighter;
+    font-size:large;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; }
+
+
 .nav-item.nav-link:hover {
-    /* Styles for hover state */
-    color: #007bff;
-}
+   color: var(--hover-color); }
+
 
 .masthead {
     padding-top: calc(6rem + 74px);
-    padding-bottom: 6rem;
-}
+    padding-bottom: 6rem;}
+
+
 .masthead .masthead-heading {
-    font-size: 2.75rem;
-    line-height: 2.75rem;
-}
+    font-size: 1rem;
+    line-height: 3rem;
+    font-size: 10rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center; }
 
-.masthead .masthead-subheading {
+    @media only screen and (max-width: 37.5em) {
+        .heading-primary {
+        font-size: 4.5rem; } 
+    }
+
+
+.masthead .masthead-subheading { 
     font-size: 1.25rem;
-}
+    font-weight: lighter;}
 
-.masthead .masthead-avatar {
-    width: 15rem;
-}
+.subheading-container {
+    width: 90%;
+    margin: 2rem auto;
+    padding-bottom: 100px; }
+
+
+
 
 .masthead-img {
-    background-image: url('../img/header-background.png');
+    background-image: url('../img/background-img.jpg');
     background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the image within the container */
-}
+    background-position: center; /* Centers the image within the container */}
 
 
 @media (min-width: 992px) {
     .masthead {
-        padding-top: calc(6rem + 104px);
-        padding-bottom: 6rem;
+        padding-top: calc(2rem + 100px);
+        padding-bottom: calc(2rem + 50px);
+        
     }
     .masthead .masthead-heading {
-        font-size: 4rem;
+        font-size: 2.8rem;
+        font-weight:950;
         line-height: 3.5rem;
+        letter-spacing: 3px;
+        background-color: var(--secondary-background-color);
     }
     .masthead .masthead-subheading {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        font-weight:550;
+        color: var(--secondary-text-color);
     }
 }
