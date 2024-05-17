@@ -1,105 +1,311 @@
-
-
-/* Define colors as CSS variables */
 :root {
-    --primary-background-color: #ffffff; /* White */
-    --secondary-background-color: #00000000; /* Very light gray */
-    --text-color: #000000; /* Dark gray for text */
+    --primary-background-color: #ffffff;
+    --secondary-background-color: #b9b9b942;
+    --text-color: #000000;
     --secondary-text-color: #2c2c2c;
-    --accent-color: #000000; /* Your accent color */
-    --hover-color: #217cbd; /* Hover color */
-    --link-color: #000000; /* Link color */
-    --hover-link-color: #385cbd; /* Hover link color */
-    --border-color: #CCCCCC; /* Light gray for borders */
-    }
+    --accent-color: #000000;
+    --hover-color: #217cbd;
+    --link-color: #000000;
+    --hover-link-color: #294fb9;
+    --border-color: #2e91c66c;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 
-/* Use the defined colors */
 body {
     background-color: var(--primary-background-color);
     color: var(--text-color);
     border-style: none;
-    font-family: sans-serif;
-    font-family: 'Source Sans Pro', sans-serif; }
-
-.container {
-    background-color: var(--secondary-background-color);
-    border: 1px solid var(--border-color);
-    border-style: none; }
-
-a { color: var(--link-color); }
-
-a:hover { color: var(--hover-link-color); }
-
-.navbar-brand {
-    margin-right: 3rem;
+    font-family: var(--bs-font-monospace);
 }
 
-.nav-item.nav-link {
+.container {
+    border: 1px solid var(--border-color);
+    border-style: none;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: auto auto;
+    padding: auto auto;
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--hover-link-color);
+}
+
+/* NAVIGATION SECTION  */
+.navbar {
+    background-color: var(--primary-background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-toggler {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler .fa-solid.fa-bars {
+    height: 2px;
+    width: 25px;
+    background-color: var(--text-color);
+    margin: 3px 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.navbar-toggler:hover {
+    color: var(--hover-color);
+    background-color: var(--secondary-background-color);
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
     color: var(--accent-color);
     text-transform: lowercase;
     font-weight: lighter;
-    font-size:large;
+    font-size: 14px;
     margin-left: 0.5rem;
-    margin-right: 0.5rem; }
+    margin-right: 0.5rem;
+    letter-spacing: 0.5px;
+}
 
+.navbar .navbar-nav a.nav-link:hover {
+    color: var(--hover-link-color);
+}
 
-.nav-item.nav-link:hover {
-   color: var(--hover-color); }
+.navbar .navbar-nav .nav-item > .social-link:hover {
+    color: var(--hover-link-color);
+}
 
+.navbar .navbar-nav .nav-item > .social-link {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
 
+.social-links {
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.social-links::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--border-color);
+    margin-right: 1rem;
+}
+
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+}
+
+/* MASTHEAD ON INDEX */
 .masthead {
-    padding-top: calc(6rem + 74px);
-    padding-bottom: 6rem;}
-
+    padding-top: calc(2rem + 80px);
+    padding-bottom: calc(2rem + 10px);
+    text-align: center;
+    min-height: 80vh;
+    font-family: var(--bs-font-sans-serif);
+}
 
 .masthead .masthead-heading {
-    font-size: 1rem;
-    line-height: 3rem;
-    font-size: 10rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    text-align: center; }
+    font-size: 2.6rem;
+    font-weight: 900;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
 
-    @media only screen and (max-width: 37.5em) {
-        .heading-primary {
-        font-size: 4.5rem; } 
-    }
+.masthead .masthead-subheading {
+    text-transform: lowercase;
+    font-size: 1.4rem;
+    font-weight: 440;
+    color: var(--secondary-text-color);
 
+}
 
-.masthead .masthead-subheading { 
-    font-size: 1.25rem;
-    font-weight: lighter;}
+.masthead .masthead-content {
+    font-size: 1.3rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    color: var(--secondary-text-color);
+    padding: 2rem;
+}
 
 .subheading-container {
-    width: 90%;
+    width: 75%;
     margin: 2rem auto;
-    padding-bottom: 100px; }
-
-
-
+    padding: 20px 20px;
+}
 
 .masthead-img {
     background-image: url('../img/background-img.jpg');
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the image within the container */}
+    background-size: cover;
+    background-position: center;
+}
+
+.scroll-button {
+    background-color: var(--hover-color);
+    color: var(--primary-background-color);
+    border: none;
+    border-radius: 15px;
+    text-transform: lowercase;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+    background-color: var(--secondary-background-color);
+}
+
+.scroll-button:focus,
+.scroll-button:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.content-container {
+    text-align: center;
+}
+
+/* ABOUT SECTION INDEX.HTML */
+.about-section {
+    min-height: 86vh;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    background-color: #f8f8f8; 
+    padding: 4rem 0;
+}
+
+.about-section .about-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-section .about-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+    text-align: justify;
+    padding: 0 1rem;
+}
 
 
-@media (min-width: 992px) {
-    .masthead {
-        padding-top: calc(2rem + 100px);
-        padding-bottom: calc(2rem + 50px);
-        
-    }
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
     .masthead .masthead-heading {
-        font-size: 2.8rem;
-        font-weight:950;
-        line-height: 3.5rem;
-        letter-spacing: 3px;
-        background-color: var(--secondary-background-color);
+        font-size: 2rem;
+        line-height: 2rem;
+        overflow-wrap: break-word;
+        white-space: wrap;
     }
+
+    .masthead {
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
     .masthead .masthead-subheading {
-        font-size: 1.3rem;
-        font-weight:550;
-        color: var(--secondary-text-color);
+        font-size: 1.2rem;
+    }
+
+    .masthead .masthead-content {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .subheading-container {
+        width: 90%;
+        padding-bottom: 10px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        display: flex;
+    }
+
+    .navbar-brand {
+        margin: auto;
+    }
+
+    .collapse {
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.35s ease, visibility 0.35s ease;
+    }
+
+    .collapse.show {
+        visibility: visible;
+        height: auto;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-brand {
+        margin: auto;
+    }
+
+    .social-links {
+        display: none !important;
+    }
+
+    .about-section {
+        padding: 2rem 1rem;
+        min-height: 86vh;
+    }
+
+    .about-section .about-heading {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-section .about-content {
+        font-size: 1rem;
+        padding: 0 0.5rem; 
     }
 }

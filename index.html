@@ -1,57 +1,87 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexander Fisher's Webfolio</title>
 
-    <!-- load style sheets -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Load style sheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-md sticky-top p-2">
-        
-        <div class="container ml-5 p-0" styles="border-style: none;">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <a class="navbar-brand" href="#"> <img src="img/navbar-developer.gif" width="80" height="60" class="d-inline-block align-top" alt=""> </a>
-                <a class="nav-item nav-link active" href="#">About</a>
-                <a class="nav-item nav-link disabled" href="#">Programming Projects</a>
-                <a class="nav-item nav-link disabled" href="#">Curriculum Vitae</a>
-                <a class="nav-item nav-link disabled" href="#">Contact</a>
+    <!-- Navigation section -->
+    <nav class="navbar navbar-expand-md navbar-light sticky-top p-4">
+        <div class="container content-container p-0 d-flex justify-content-between align-items-center">
+            <!-- Logo section -->
+            <div class="logo-section">
+                <a class="navbar-brand" href="#">
+                    <img src="img/navbar-developer.gif" width="80" height="60" alt="">
+                </a>
+            </div>
+            <!-- Menu button for smaller screen -->
+            <div class="nav-section d-flex align-items-center">
+                <button class="navbar-toggler mt-2 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-center w-100" id="navbarCollapse">
+                <!-- Navigation items -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">about</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">programming-projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">curriculum-vitae</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
+                </ul>
+                <!-- Social links section -->
+                <ul class="navbar-nav social-links d-flex flex-row">
+                    <li class="nav-item"><a class="nav-link social-link" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li class="nav-item"><a class="nav-link social-link" href="#"><i class="fab fa-github"></i></a></li>
+                    <li class="nav-item"><a class="nav-link social-link" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="nav-item"><a class="nav-link social-link" href="#"><i class="fas fa-envelope"></i></a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Header -->
     <header class="masthead text-center masthead-img">
-        <div class="container d-flex align-items-center flex-column opacity-0">
+        <div class="content-container d-flex align-items-center flex-column">
             <div class="row justify-content-center">
-                <div class="col-lg-8"> <!-- Adjust the width based on your needs, e.g., col-lg-6 for half width -->
-                    <h1 class="masthead-heading text-uppercase mb-1">Hey, I'm Alexander Fisher.</h1>
+                <div class="col-lg-8">
+                    <h1 class="masthead-heading mb-6">Hey, I'm Alexander Fisher.</h1>
                     <div class="subheading-container">
-                        <p class="masthead-subheading">Welcome to my digital porfolio. Here you can learn a little bit about me, view my digitalised curriculum vitae as well as some of my programming projects.</p>
+                        <img src="img/navbar-developer.gif" width="240" height="180" alt="">
+                        <p class="masthead-content justify-content-center">Welcome to my digital portfolio. Here you can learn a little bit about me, view my digitalized curriculum vitae and explore my programming projects.</p>
+                        <div class="button-container ml-auto">
+                            <button class="scroll-button" id="scrollToAbout">Learn More</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-  
-    
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="content-container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="about-heading" id="about">About Me</h2>
+                    <p class="about-content">I am a graduate software engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success. Well-versed in technology and writing code to create reliable, user-friendly solutions. Confident communicator, strategic thinker, and innovative creator to develop software that is customized to meet a company’s organizational needs, highlight their core competencies, and further their success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
 
-
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Load JavaScript files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aad2ad643d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
