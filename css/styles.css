@@ -25,7 +25,7 @@ body {
 }
 
 .content-container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: auto auto;
     padding: auto auto;
 }
@@ -43,6 +43,7 @@ a:hover {
     background-color: var(--primary-background-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    height: 100px;
 }
 
 .navbar-toggler {
@@ -130,10 +131,10 @@ a:hover {
 
 /* MASTHEAD ON INDEX */
 .masthead {
-    padding-top: calc(2rem + 80px);
+    padding-top: calc(2rem + 50px);
     padding-bottom: calc(2rem + 10px);
     text-align: center;
-    min-height: 80vh;
+    min-height: 70vh;
     font-family: var(--bs-font-sans-serif);
 }
 
@@ -204,17 +205,17 @@ a:hover {
 
 /* ABOUT SECTION INDEX.HTML */
 .about-section {
-    min-height: 86vh;
+    
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
     background-color: #f8f8f8; 
-    padding: 4rem 0;
+    padding: 2rem 0;
+    padding-left: 2rem;
 }
 
 .about-section .about-heading {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 3rem;
+    font-weight: bolder;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 .about-section .about-content {
@@ -223,6 +224,73 @@ a:hover {
     color: var(--secondary-text-color);
     text-align: justify;
     padding: 0 1rem;
+}
+
+#aboutContent::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+#aboutContent {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Make sure the content area has a fixed height and overflow auto */
+#aboutContent {
+    overflow-y: scroll;
+    overflow-y: hidden; /* Hide horizontal scrollbar if any */
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.scrollable-content {
+    overflow-y: auto;
+    height: 100%;
+}
+
+
+/* General styles for the about-nav links */
+.about-nav .nav-link {
+    color: #ffffff; /* Example color */
+    padding: 10px;
+    transition: color 0.3s, background-color 0.3s; /* Smooth transitions */
+    background-color: #b3b5b8;
+    color: var(--primary-background-color);
+    border: none;
+    border-radius: 15px;
+    text-transform: lowercase;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Style for active link */
+.about-nav .nav-link.active {
+    color: #ffffff; /* Active link color */
+    background-color: #ffffff; /* Background color for active link */
+    background-color: var(--hover-color);
+    outline: none;
+    box-shadow: none;
+}
+
+/* Style for hovered link */
+.about-nav .nav-link:hover {
+    background-color: var(--secondary-background-color);
+}
+
+.collapse {
+    visibility: visible;
+    overflow: hidden;
+    transition: height 0.001s ease, visibility 0.01s ease;
 }
 
 
@@ -246,12 +314,16 @@ a:hover {
 
     .masthead .masthead-content {
         font-size: 1.1rem;
-        padding: 0 1rem;
+        padding: 1rem 1rem;
     }
 
     .subheading-container {
         width: 90%;
         padding-bottom: 10px;
+    }
+
+    .navbar {
+        height: auto;
     }
 
     .navbar-nav {
@@ -269,25 +341,11 @@ a:hover {
         margin: auto;
     }
 
-    .collapse {
-        visibility: hidden;
-        height: 0;
-        overflow: hidden;
-        transition: height 0.35s ease, visibility 0.35s ease;
-    }
-
     .collapse.show {
         visibility: visible;
+        display: block;
         height: auto;
-    }
-
-    .navbar-nav {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .navbar-brand {
-        margin: auto;
+        background-color: var(--primary-background-color)
     }
 
     .social-links {
@@ -307,5 +365,15 @@ a:hover {
     .about-section .about-content {
         font-size: 1rem;
         padding: 0 0.5rem; 
+    }
+
+    .about-nav .nav-link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 990px) {
+    .flex-column {
+        display: none;
     }
 }

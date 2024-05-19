@@ -1,7 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const navbarCollapse = document.getElementById('navbarCollapse');
-    // const navbarToggler = document.querySelector('.navbar-toggler');
     let previousWidth = window.innerWidth;
 
     function handleResize() {
@@ -32,5 +31,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.querySelector('.scroll-button').addEventListener('click', function() {
-    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+    const aboutSection = document.getElementById('about');
+    const sectionPosition = aboutSection.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = sectionPosition - navbarHeight;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+    });
 });
+
+
+
