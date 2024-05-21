@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse justify-content-center w-100" id="navbarCollapse">
                 <!-- Navigation items -->
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">about</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">programming-projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">curriculum-vitae</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
@@ -53,7 +53,8 @@
                     <h1 class="masthead-heading mb-6">Hey, I'm Alexander Fisher.</h1>
                     <div class="subheading-container">
                         <img src="img/navbar-developer.gif" width="240" height="180" alt="">
-                        <p class="masthead-content justify-content-center">Welcome to my digital portfolio. Here you can learn a little bit about me, view my digitalized curriculum vitae and explore my programming projects.</p>
+                        <p class="masthead-content justify-content-center">Welcome to my digital portfolio. Here you can learn a little bit about me, view my digitalized curriculum vitae 
+                            and explore my programming projects.</p>
                         <div class="button-container ml-auto">
                             <button class="scroll-button" id="scrollToAbout">Learn More</button>
                         </div>
@@ -67,84 +68,176 @@
     <!-- About Section -->
     <section class="about-section section container-fluid " id="about">
         <div class="container content-container d-flex justify-content-between">
-            <div class="row">
+            <div class="row custom-row">
                 <!-- Vertical Navbar -->
-                <div class="col-sm-2 d-none d-sm-block flex-column">
-                    <nav class="position-sticky top-50  start-50 translate-middle-y  about-nav">
-                        <ul class="nav justify-content-start" style="padding-top: 200px;">
-                            <li class="nav-item"><a class="nav-link active" href="#section1">Section 1</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#section2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#section3">Section 3</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#section4">Section 4</a></li>
+                <div class="col-md-2 custom-position d-none d-md-block">
+                    <nav class="about-nav">
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#background">background</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#experience">experience</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#fast-facts">fast-facts</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#gallery">gallery</a></li>
                         </ul>
                     </nav>
                 </div>
-                <!-- Vertical Navbar -->
-                <!-- Vertical Navbar -->
-                <!-- <div class="col-md-2 d-none d-md-block flex-column" style="max-height: calc(100vh - 100px); overflow-y: auto; padding-right: 5rem;">
-                    <nav class="position-sticky about-nav" style="top: 50%; transform: translateY(-50%);">
-                        <ul class="nav flex-column">
-                            <li class="nav-item"><a class="nav-link active" href="#section1">Section 1</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#section2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#section3">Section 3</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#section4">Section 4</a></li>
-                        </ul>
-                    </nav>
-                </div> -->
-
 
 
                 <!-- Content -->
                 <div class="col-sm-12 col-md-12 col-lg-8" id="aboutContent">
                     <main class="justify-content-center">
                         <h2 class="about-heading">about.</h2>
-                        <p class="about-content">I am a graduate software engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success. Well-versed in technology and writing code to create reliable, user-friendly solutions. Confident communicator, strategic thinker, and innovative creator to develop software that is customized to meet a company’s organizational needs, highlight their core competencies, and further their success.</p>
-                        <div id="section1" class="pt-3">
-                            <h2>Section 1</h2>
-                            <p>Content for section 1...</p>
+                        <p class="about-content">
+                            Welcome to my corner of the digital world! I'm a recent graduate in MSc Computer Science based in Bristol, UK, with an avid passion for all things computer related. 
+                            Here, I'll delve into my background, experiences, and aspirations as a software engineer. Currently, I'm on the lookout for exciting opportunities in graduate software 
+                            engineering roles, where I can continue to grow, learn, and contribute to meaningful projects. My aim is to consolidate my skills and experiences while embracing new 
+                            challenges in the ever-evolving tech landscape. Stay tuned for more insights into my journey as a software engineer, and feel free to reach out if you'd like to connect 
+                            or discuss potential collaborations! For a more detailed overview of my education and professional experiecences please visist my curriculum vitae. </p>
+                        <div class="about-content" id="background">
+                            <hr class="content-separator">
+                            <h2>background</h2>
+                            <p>So, a bit about my backgorund – I'm originally from Preston, UK, but I spent a good chunk of my childhood basking in the sun in Brisbane, Australia. 
+                                Yep, that's right, sunny beaches and endless bbqs were the norm for me. Oh, and let's not forget my passion for the Brisbane Roar - the local football team. </p>
+                            <p>Back in the UK since 2017, I've called Preston, Cardiff, and Abergavenny home before completing my BEng in Engineering Mathematics in the vibrant city of Bristol. 
+                                Post Covid I gaining my PGCE and QTS and taught secondary school mathematics in local secondary schools based in Preston.</p> 
+                            <p>Fast forward to today, and I'm knee-deep in my MSc in Computer Science here in Bristol. It's been quite the journey, but hey, life's all about the adventure, right?</p>
                         </div>
-                        <div id="section2" class="pt-3">
-                            <h2>Section 2</h2>
-                            <p>Content for section 2...</p>
+                        <div class="about-content" id="experience">
+                            <hr class="content-separator">
+                            <h2>experience</h2>                                
+                            <p>
+                            I undertook my undergraduate degree at the University of Bristol for which I achieved a
+                            first-class honours degree in Engineering Mathematics. I found my time studying in
+                            Bristol extremely rewarding both personally and academically. During my time in
+                            Bristol, I forged positive relationships within the engineering cohort, as well as in the
+                            wider student community. I played an integral part in the Pool and Snooker society and
+                            served on the committee as Snooker Captain. By overcoming both personal and
+                            academic challenges while studying in Bristol I have demonstrated my aptitude and
+                            ability to succeed in higher academic study, as well as my ability to show determination
+                            and resilience.
+                            </p>
+                            
+                            <p>
+                            I have a strong mathematical background having studied a range of mathematics
+                            modules, including discrete mathematics which I provide a strong basis for
+                            computer science. My biggest achievement while at Bristol was completing
+                            my final exams remotely during a global pandemic. This took a display of high levels of
+                            determination, motivation, and flexibility. To complete my Control 3 assessment, I learnt
+                            a new program Simulink in a limited amount of time. This I feel epitomises study and
+                            life in the computing world which is characterised by the constant need to learn and
+                            keep up to date with emerging technologies.
+                            </p>
+                            
+                            <p>
+                            Since graduating from Bristol my interest in computer science has continued to grow.
+                            The main outlet for this has been the vast wealth of online resources and courses
+                            available online. I firstly completed a Data Science Specialisation (MOOC) course in
+                            which I was exposed to the various tools and processes needed throughout an entire
+                            data science pipeline. I then proceeded to engage in the various strands of CS50’s online
+                            courses, which more specifically relate to computer science and programming. While
+                            exploring these I really fostered my interest in programming and would characterise
+                            myself at this point as being ‘hooked.’ I learnt the basics of programming, data
+                            structures, and algorithms. Overall, by exploring these various resources I have planted
+                            a strong passion in programming, as well as developed my ability to problem solve and
+                            think algorithmically. Previously I have worked remotely as a Data Analyst and Software Developer for a start-
+                            up company Efomics Ltd. This role focused on online ordering and epos software. As
+                            this work was remote, I displayed high levels of motivation and organisation, as well as
+                            an ability to communicate clearly. This experience was invaluable in giving me an
+                            opportunity to work in a computing related role and has consolidated my passion to
+                            work in this industry. My main achievement was implementing a document categorizer
+                            in python using skills acquired while undertaking CS50’s Artificial Intelligence (MOOC)
+                            course. This role was challenging in many aspects due to my limited experience in
+                            programming, as well as unfamiliarity with the technologies they used. I strongly believe
+                            as such further training would be highly beneficial and aid my ability to succeed in
+                            similar roles in the future.
+                            </p>
+                            
+                            <p>
+                            Previously I have worked on long term supply for a local school as a mathematics teacher.
+                            Teaching has provided me with a contrast to the area of engineering/computing and
+                            has exposed me to a different set of challenges. The time I spent both training and
+                            working in the field has been productive and has helped me enhance my interpersonal
+                            skills and communication skills immeasurably. Teaching demands a strong work ethic
+                            and high levels of professionalism. I have developed a range of transferable skills that I
+                            will take with me to any future endeavour. I am comfortable at public speaking and am
+                            an active participant when working in a team environment.
+                            </p>
                         </div>
-                        <div id="section3" class="pt-3">
-                            <h2>Section 3</h2>
-                            <p>Content for section 3...</p>
+                        <div class="about-content" id="fast-facts">
+                            <hr class="content-separator">
+                            <h2>fast-facts</h2>
+                            <h3>Home town</h3>
+                            <p>Brisbane, Australia 🇦🇺 🦘</p>
+
+                            <h3>When I started programming</h3>
+                            <p>2018 (undergraduate module 'Introduction to Programming').</p>
+
+                            <h3>Education</h3>
+                            <p>BEng in Engineering Mathematics at University of Bristol, MSc in Computer Science at University of Bristol, PGCE and QTS at University of Cumbria, lots of online tutorials, 
+                                and 5+ years of practice and experimenting.</p>
+
+                            <h3>Specialties</h3>
+                            <p>Proficient in C, Java, and Python programming languages, with extensive experience in logic-based tasks and problem-solving. Skilled in algorithm development, 
+                                data structures, and mathematical modeling. Strong background in engineering and adept at applying mathematical principles to technical challenges.</p>
+
+                            <h3>Hobbies</h3>
+                            <p>Snooker, cooking, saxophonist, chess <i style='font-size:24px' class='fas'>&#xf439;</i></p>
+
+                            <h3>Favourite pastime</h3>
+                            <p>A visit to the local snooker club with friends with a beer in hand (or maybe 2) 🍺.</p>
+
+                            <h3>Favourite Music</h3>
+                            <p>Radiohead. Ben Howard. Phillip Glass. Chris Potter</p>
+
+                            <h3>Favourite quote</h3>
+                            <p>“I refuse to join any club that would have me as a member.” Groucho Marx</p>
                         </div>
-                        <div id="section4" class="pt-3">
-                            <h2>Section 4</h2>
-                            <p>Content for section 4...</p>
-                        </div>
-                        <div id="section4" class="pt-3">
-                            <h2>Section 4</h2>
-                            <p>Content for section 4...</p>
-                        </div>
-                        <div id="section4" class="pt-3">
-                            <h2>Section 4</h2>
-                            <p>Content for section 4...</p>
-                        </div>
-                        <div id="section4" class="pt-3">
-                            <h2>Section 4</h2>
-                            <p>Content for section 4...</p>
-                        </div>
-                        <div id="section4" class="pt-3">
-                            <h2>Section 4</h2>
-                            <p>Content for section 4...</p>
-                        </div>
-                        <div id="section4" class="pt-3">
-                            <h2>Section 4</h2>
-                            <p>Content for section 4...</p>
+                        <div class="about-content" id="gallery">
+                            <hr class="content-separator pt-5">
+                            <div id="carouselGalleryID" class="carousel slide carouselGallery" data-bs-ride="carousel" >
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active" alert-dismissible  data-bs-interval="1000">
+                                    <img src="img/gallery/morton_island_camping.JPG" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="img/gallery/morton_island.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="img/gallery/hs_graduation.JPG" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="img/gallery/sw_pool_comp.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselGalleryID" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselGalleryID" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                      
+              
                         </div>
                     </main>
+                    <div class="row custom-row">
+                        <div class="button-container pt-5 align-content-center">
+                            <button class="scroll-button px-4 " id="backToTopButton">Back to Top</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        
     </section>
 
-    <footer style="height: 1000px;">
-
-
-
+    <footer>
+        <div class="container content-container">
+            <div class="row d-flex align-content-center  justify-content-center ">
+                <p style="margin-bottom: 0px; margin-top: 14px;">&copy; Copyright 2024. Made by Alexander Fisher. Built with Bootstrap 5.</p>
+            </div>
+        </div>
     </footer>
 
 
@@ -152,6 +245,8 @@
 
 
     <!-- Load JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/aad2ad643d.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

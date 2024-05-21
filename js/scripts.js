@@ -43,4 +43,73 @@ document.querySelector('.scroll-button').addEventListener('click', function() {
 });
 
 
+document.querySelectorAll('.about-nav .nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const offsetPosition = targetElement.offsetTop - navbarHeight;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const offsetPosition = targetElement.offsetTop - navbarHeight;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll('.about-content');
+    const navLinks = document.querySelectorAll('.about-nav .nav-link');
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+    function onScroll() {
+        let scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - navbarHeight;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                navLinks.forEach(navLink => {
+                    navLink.classList.remove('active');
+                    if (section.getAttribute('id') === navLink.getAttribute('href').substring(1)) {
+                        navLink.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+
+    document.addEventListener('scroll', onScroll);
+    onScroll(); // Initial call to set the active link based on the initial scroll position
+});
+
+document.getElementById('backToTopButton').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
 
