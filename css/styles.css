@@ -96,6 +96,8 @@ a:hover {
 
 .navbar .navbar-nav a.nav-link:hover {
     color: var(--hover-link-color);
+    border-radius: 8%;
+    background-color: #ebebeb71;
 }
 
 .navbar .navbar-nav .nav-item > .social-link:hover {

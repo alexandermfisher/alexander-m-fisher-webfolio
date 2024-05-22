@@ -1,3 +1,6 @@
+# ignore todos
+todos
+
 # ignore all files starting with . or ~
 .*
 ~*
