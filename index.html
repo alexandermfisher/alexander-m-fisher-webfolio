@@ -29,10 +29,10 @@
             <div class="collapse navbar-collapse justify-content-center w-100" id="navbarCollapse">
                 <!-- Navigation items -->
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#about">about</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">programming-projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">curriculum-vitae</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">contact</a></li>
                 </ul>
                 <!-- Social links section -->
                 <ul class="navbar-nav social-links d-flex flex-row">
@@ -47,7 +47,7 @@
 
     <!-- Header -->
     <header class="masthead text-center masthead-img">
-        <div class="container content-container p-0 d-flex justify-content-between align-items-center">
+        <div class="container content-container p-0 d-flex justify-content-around align-items-center">
             <div class="row justify-content-center">
                 <div class="col-sm-8">
                     <h1 class="masthead-heading mb-6">Hey, I'm Alexander Fisher.</h1>
@@ -64,9 +64,8 @@
         </div>
     </header>
 
-
     <!-- About Section -->
-    <section class="about-section section container-fluid " id="about">
+    <section class="about-section section container-fluid" id="about">
         <div class="container content-container d-flex justify-content-between">
             <div class="row custom-row">
                 <!-- Vertical Navbar -->
@@ -76,11 +75,9 @@
                             <li class="nav-item"><a class="nav-link" href="#background">background</a></li>
                             <li class="nav-item"><a class="nav-link" href="#experience">experience</a></li>
                             <li class="nav-item"><a class="nav-link" href="#fast-facts">fast-facts</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#gallery">gallery</a></li>
                         </ul>
                     </nav>
                 </div>
-
 
                 <!-- Content -->
                 <div class="col-sm-12 col-md-12 col-lg-8" id="aboutContent">
@@ -164,101 +161,71 @@
                         </div>
                         <div class="about-content" id="fast-facts">
                             <hr class="content-separator">
-                            <h2>fast-facts</h2>
-                            <h3>Home town</h3>
-                            <p>Brisbane, Australia 🇦🇺 🦘</p>
-
-                            <h3>When I started programming</h3>
-                            <p>2018 (undergraduate module 'Introduction to Programming').</p>
-
-                            <h3>Education</h3>
-                            <p>BEng in Engineering Mathematics at University of Bristol, MSc in Computer Science at University of Bristol, PGCE and QTS at University of Cumbria, lots of online tutorials, 
-                                and 5+ years of practice and experimenting.</p>
-
-                            <h3>Specialties</h3>
-                            <p>Proficient in C, Java, and Python programming languages, with extensive experience in logic-based tasks and problem-solving. Skilled in algorithm development, 
-                                data structures, and mathematical modeling. Strong background in engineering and adept at applying mathematical principles to technical challenges.</p>
-
-                            <h3>Hobbies</h3>
-                            <p>Snooker, cooking, saxophonist, chess <i style='font-size:24px' class='fas'>&#xf439;</i></p>
-
-                            <h3>Favourite pastime</h3>
-                            <p>A visit to the local snooker club with friends with a beer in hand (or maybe 2) 🍺.</p>
-
-                            <h3>Favourite Music</h3>
-                            <p>Radiohead. Ben Howard. Phillip Glass. Chris Potter</p>
-
-                            <h3>Favourite quote</h3>
-                            <p>“I refuse to join any club that would have me as a member.” Groucho Marx</p>
-                        </div>
-                        <div class="about-content" id="gallery">
-                            <hr class="content-separator pt-5">
-                            <div id="carouselGalleryID" class="carousel slide carouselGallery" data-bs-ride="carousel" >
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active" alert-dismissible  data-bs-interval="1000">
-                                        <img src="img/gallery/morton_island_camping.JPG" class="d-block w-100" alt="...">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>Morton Island</h5>
-                                            <p>Boys-trip to island off the coast of Brisbane.</p>
-                                        </div>
+                            <h2 class="mb-4">fast-facts</h2>
+                            <div class="row flex-column flex-md-row gap-4">
+                                <div class="col-md-5">
+                                    <div class="fact-box">
+                                        <h3>Home town</h3>
+                                        <p>Brisbane, Australia 🇦🇺 🦘</p>
                                     </div>
-                                    <div class="carousel-item">
-                                        <img src="img/gallery/morton_island.jpg" class="d-block w-100" alt="...">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>Morton Island</h5>
-                                            <p>Boys-trip to island off the coast of Brisbane.</p>
-                                        </div>
+                                    <div class="fact-box mt-4">
+                                        <h3>When I started programming</h3>
+                                        <p>2018 (undergraduate module 'Introduction to Programming').</p>
                                     </div>
-                                    <div class="carousel-item">
-                                        <img src="img/gallery/hs_graduation.JPG" class="d-block w-100" alt="...">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>High School Graduation</h5>
-                                            <p>Pre-event of my high school's graduation event</p>
-                                        </div>
+                                    <div class="fact-box mt-4">
+                                        <h3>Education</h3>
+                                        <p>BEng in Engineering Mathematics at University of Bristol, MSc in Computer Science at University of Bristol, PGCE and QTS at University of Cumbria, lots of online tutorials, 
+                                            and 5+ years of practice and experimenting.</p>
                                     </div>
-                                    <div class="carousel-item">
-                                        <img src="img/gallery/sw_pool_comp.jpg" class="d-block w-100" alt="...">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>Southwesterns Pool Comp.</h5>
-                                            <p>Won the first univeristy pool event I participated in during my undergraduate at UoB.</p>
-                                        </div>
+                                    <div class="fact-box">
+                                        <h3>Specialties</h3>
+                                        <p>Proficient in C, Java, and Python programming languages, with extensive experience in logic-based tasks and problem-solving. Skilled in algorithm development, 
+                                            data structures, and mathematical modeling. Strong background in engineering and adept at applying mathematical principles to technical challenges.</p>
                                     </div>
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselGalleryID" data-bs-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselGalleryID" data-bs-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="visually-hidden">Next</span>
-                                </button>
+                                <div class="col-md-5">
+                                    <div class="fact-box">
+                                        <h3>Hobbies</h3>
+                                        <p>Snooker, cooking, saxophonist, chess <i style='font-size:24px' class='fas'>&#xf439;</i></p>
+                                    </div>
+                                    <div class="fact-box mt-4">
+                                        <h3>Favourite pastime</h3>
+                                        <p>A visit to the local snooker club with friends with a beer in hand (or maybe 2) 🍺.</p>
+                                    </div>
+                                    <div class="fact-box mt-4">
+                                        <h3>Favourite Music</h3>
+                                        <p>Radiohead. Ben Howard. Phillip Glass. Chris Potter</p>
+                                    </div>
+                                    <div class="fact-box mt-4">
+                                        <h3>Favourite quote</h3>
+                                        <p>“I refuse to join any club that would have me as a member.” Groucho Marx</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        
                     </main>
-                    <div class="row custom-row">
-                        <div class="button-container pt-5 align-content-center">
+                    <div class="row d-flex align-items-center justify-content-center" style="padding: 20px;">
+                        <div class="col-12 text-center">
                             <button class="scroll-button px-4 " id="backToTopButton">Back to Top</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container content-container">
-            <div class="row d-flex align-content-center  justify-content-center ">
-                <p style="margin-bottom: 0px; margin-top: 14px;">&copy; Copyright 2024. Made by Alexander Fisher. Built with Bootstrap 5.</p>
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-12 text-center">
+                    <p style="margin-bottom: 0px; margin-top: 14px;">&copy; Copyright 2024. Made by Alexander Fisher. Built with Bootstrap 5.</p>
+                </div>
             </div>
         </div>
     </footer>
 
-
-
-
-
-    <!-- Load JavaScript files -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

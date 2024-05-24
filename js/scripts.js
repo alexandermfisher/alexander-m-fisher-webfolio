@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const navbarCollapse = document.getElementById('navbarCollapse');
     let previousWidth = window.innerWidth;
@@ -7,12 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentWidth = window.innerWidth;
         if (currentWidth !== previousWidth) {
             if (currentWidth >= 768 && navbarCollapse.classList.contains('show')) {
-                // Collapse the navbar if it's open when resizing to a larger screen
                 navbarCollapse.classList.remove('show');
                 navbarCollapse.style.height = '';
             }
             if (currentWidth < 768) {
-                // Ensure the navbar is collapsed on smaller screens
                 if (navbarCollapse.classList.contains('show')) {
                     navbarCollapse.classList.remove('show');
                     navbarCollapse.style.height = '';
@@ -22,13 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Reset the collapse state when the window is resized
     window.addEventListener('resize', handleResize);
-
-    // Ensure the initial state is correct
     handleResize();
 });
-
 
 document.querySelector('.scroll-button').addEventListener('click', function() {
     const navbarHeight = document.querySelector('.navbar').offsetHeight;
@@ -41,7 +34,6 @@ document.querySelector('.scroll-button').addEventListener('click', function() {
         behavior: 'smooth'
     });
 });
-
 
 document.querySelectorAll('.about-nav .nav-link').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -75,9 +67,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll('.about-content');
     const navLinks = document.querySelectorAll('.about-nav .nav-link');
@@ -87,8 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
         let scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - navbarHeight;
-            const sectionBottom = sectionTop + section.offsetHeight;
+            const sectionTop = section.offsetTop - navbarHeight - 2;
+            const sectionBottom = sectionTop + section.offsetHeight - 2;
 
             if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
                 navLinks.forEach(navLink => {
@@ -102,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.addEventListener('scroll', onScroll);
-    onScroll(); // Initial call to set the active link based on the initial scroll position
+    onScroll(); 
 });
 
 document.getElementById('backToTopButton').addEventListener('click', function() {
@@ -111,5 +100,8 @@ document.getElementById('backToTopButton').addEventListener('click', function() 
         behavior: 'smooth'
     });
 });
+
+
+
 
 
