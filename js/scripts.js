@@ -35,6 +35,27 @@ document.querySelector('.scroll-button').addEventListener('click', function() {
     });
 });
 
+
+
+
+const scrollButton = document.querySelector('#scrollToProjects');
+if (scrollButton) {
+    // Add event listener only if the scroll button exists
+    scrollButton.addEventListener('click', function() {
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const projectsSection = document.getElementById('projects');
+        const sectionPosition = projectsSection.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = sectionPosition - navbarHeight;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+}
+
+
+
 document.querySelectorAll('.about-nav .nav-link').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -101,7 +122,13 @@ document.getElementById('backToTopButton').addEventListener('click', function() 
     });
 });
 
-
+// JavaScript to apply colors to the buttons
+document.querySelectorAll('.card').forEach(card => {
+    const primaryColor = card.getAttribute('data-color-primary');
+    const secondaryColor = card.getAttribute('data-color-secondary');
+    card.querySelector('.btn-primary').style.backgroundColor = primaryColor;
+    card.querySelector('.btn-secondary').style.backgroundColor = secondaryColor;
+});
 
 
 

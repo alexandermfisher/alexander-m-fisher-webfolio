@@ -30,9 +30,7 @@ a:hover {
     border: 1px solid var(--border-color);
 }
 
-.content-container {
-    margin: auto auto;
-}
+
 
 .navbar {
     background-color: var(--primary-background-color);
@@ -123,18 +121,19 @@ a:hover {
     height: 100%;
     background-color: var(--border-color);
     margin-right: 1rem;
+    padding-left: 1rem;
 }
 
 .navbar-collapse {
     display: flex;
-    align-items: center;
+    padding-right:7%;
 }
 
 .masthead {
-    padding-top: calc(2rem + 50px);
-    padding-bottom: calc(2rem + 10px);
+    padding-top: calc(2rem + 70px);
+    padding-bottom: calc(10px);
     text-align: center;
-    min-height: 70dvh;
+    min-height: 80dvh;
     font-family: var(--bs-font-sans-serif);
 }
 
@@ -166,8 +165,8 @@ a:hover {
 
 .subheading-container {
     width: 75%;
-    margin: 2rem auto;
-    padding: 20px;
+   
+    padding-bottom: 3rem;
 }
 
 .masthead-img {
@@ -176,13 +175,15 @@ a:hover {
     background-position: center;
 }
 
+
+
 .scroll-button {
     background-color: var(--hover-color);
     color: var(--primary-background-color);
     border: none;
     border-radius: 15px;
     text-transform: lowercase;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
     font-size: 1.1rem;
     font-weight: lighter;
     cursor: pointer;
@@ -213,14 +214,14 @@ a:hover {
 .about-section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
     background-color: #f8f8f8;
-    padding: 2rem 2rem 2rem 0;
+    padding-top: 5rem;
 }
 
 .about-section .about-heading {
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    padding: 2rem;
+    padding-bottom: 2rem;
 }
 
 .about-section .about-content {
@@ -229,7 +230,7 @@ a:hover {
     word-spacing: 4%;
     color: var(--secondary-text-color);
     text-align: justify;
-    padding: 0 1rem;
+    
 }
 
 .about-content > h2 {
@@ -313,7 +314,7 @@ a:hover {
 .fact-box {
     background-color: #dedede4c;
     border-radius: 20px;
-    padding: 20px;
+    padding: 40px;
     margin-bottom: 20px;
 }
 .fact-box h3 {
@@ -395,6 +396,109 @@ footer {
 .custom-social-link:hover span {
     opacity: 0.6; 
 }
+
+.scroll-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: #000000;
+    background: rgba(52, 58, 64, 0.5);
+    line-height: 50px;
+}
+.scroll-to-top:focus, .scroll-to-top:hover {
+    color: #2e2e2e;
+}
+
+.scroll-to-top:hover {
+    background: #343a40;
+}
+.scroll-to-top i {
+    font-weight: 800;
+}
+
+.card {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.359);
+    transition: transform 0.2s;
+    font-size: small;
+    font-family: monospace;
+    width: 100%;
+    height: auto; 
+    margin: auto;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.227);
+    background-image: url('../img/background-img.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-img-fixed {
+    max-height: 200px;
+    width: 100%;
+    object-fit: scale-down;
+    object-position: center;
+}
+
+.card-container {
+    padding: 1%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.btn-primary.card-button {
+    background-color: var(--hover-color);
+}
+
+.btn-secondary.card-button {
+    background-color: #165e91b1;
+}
+
+.card-button {
+    color: var(--primary-background-color);
+    border: none;
+    border-radius: 15px;
+    text-transform: lowercase;
+    padding: 0.4rem 0.4rem;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    cursor: pointer;
+    margin-right: 0.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: var(--secondary-background-color);
+}
+
+.card-button:focus,
+.card-button:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.disabled {
+    opacity: 0.5; 
+    pointer-events: none; 
+}
+
+.disabled .card-body {
+    opacity: 0.5;
+}
+
 
 
 
@@ -502,6 +606,8 @@ footer {
         margin-right: 10px;
         color: #fff; 
     }
+    
+    
 }
 
 @media (max-width: 990px) {
@@ -520,5 +626,48 @@ footer {
     }
     .contact-section {
         padding: 1rem;
+    }
+}
+
+
+
+
+
+/* General styles for debugging */
+.debug-section {
+    border: 2px solid red; /* Red border for visual aid */
+    background-color: rgba(255, 0, 0, 0.1); /* Light red background for visual aid */
+    margin-bottom: 1rem; /* Spacing between sections */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .debug-section-sm {
+        border: 2px solid green;
+        background-color: rgba(0, 255, 0, 0.1);
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .debug-section-md {
+        border: 2px solid blue;
+        background-color: rgba(0, 0, 255, 0.1);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .debug-section-lg {
+        border: 2px solid orange;
+        background-color: rgba(255, 165, 0, 0.1);
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .debug-section-xl {
+        border: 2px solid purple;
+        background-color: rgba(128, 0, 128, 0.1);
     }
 }
