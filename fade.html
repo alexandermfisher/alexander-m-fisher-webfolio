@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Fade Out Sides</title>
+    <style>
+        :root {
+            --primary-background-color: #ffffff;
+            --text-color: #000000;
+            --fade-width: 50px; /* Width of the fade effect */
+            --content-max-width: 1200px; /* Maximum width of the content area */
+            --content-min-width: 300px; /* Minimum width of the content area */
+        }
+
+        body {
+            background-color: var(--primary-background-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .container {
+            max-width: var(--content-max-width);
+            min-width: var(--content-min-width);
+            margin: auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Create the fade effect on the left side */
+        .fade-left::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: var(--fade-width);
+            height: 100%;
+            background: linear-gradient(to right, var(--primary-background-color), transparent);
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Create the fade effect on the right side */
+        .fade-right::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: var(--fade-width);
+            height: 100%;
+            background: linear-gradient(to left, var(--primary-background-color), transparent);
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body class="fade-left fade-right">
+    <div class="container">
+        <h1>Content Title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>More content goes here...</p>
+    </div>
+</body>
+</html>

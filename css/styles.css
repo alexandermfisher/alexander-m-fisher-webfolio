@@ -10,6 +10,7 @@
     --border-color: #ffffff00;
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --fade-width: 300px;
 }
 
 body {
@@ -29,8 +30,6 @@ a:hover {
 .container {
     border: 1px solid var(--border-color);
 }
-
-
 
 .navbar {
     background-color: var(--primary-background-color);
@@ -96,7 +95,6 @@ a:hover {
     color: var(--hover-link-color);
     
 }
-
 
 .navbar .navbar-nav .nav-item > .social-link {
     color: var(--accent-color);
@@ -178,8 +176,6 @@ a:hover {
     background-position: center;
 }
 
-
-
 .scroll-button {
     background-color: var(--hover-color);
     color: var(--primary-background-color);
@@ -233,7 +229,6 @@ a:hover {
     word-spacing: 4%;
     color: var(--secondary-text-color);
     text-align: justify;
-    
 }
 
 .about-content > h2 {
@@ -304,10 +299,10 @@ a:hover {
 .about-nav .nav-link a {
     align-content: center;
 }
+
 .about-nav .nav-link.active {
     color: #ffffff;
     background-color: var(--hover-color);
-    
 }
 
 .about-nav .nav-link:hover {
@@ -320,6 +315,7 @@ a:hover {
     padding: 40px;
     margin-bottom: 20px;
 }
+
 .fact-box h3 {
     font-size: large;
     text-decoration: underline;
@@ -337,6 +333,14 @@ a:hover {
     align-items: center;
     color: var(--accent-color);
     text-align: center;
+}
+
+.content-section {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    background-color: #f8f8f8;
+    padding: 2rem 2rem 2rem 0;
+    height: calc(100vh - 170px);
+    overflow-y: auto;
 }
 
 .header {
@@ -412,6 +416,7 @@ footer {
     background: rgba(52, 58, 64, 0.5);
     line-height: 50px;
 }
+
 .scroll-to-top:focus, .scroll-to-top:hover {
     color: #2e2e2e;
 }
@@ -419,6 +424,7 @@ footer {
 .scroll-to-top:hover {
     background: #343a40;
 }
+
 .scroll-to-top i {
     font-weight: 800;
 }
@@ -502,9 +508,6 @@ footer {
     opacity: 0.5;
 }
 
-
-
-
 .custom-modal-content {
     background-color: #e9e9e9f5; 
 }
@@ -518,8 +521,6 @@ footer {
 .modal-lg {
     max-width: 80%;
 }
-
-
 
 .content-separator-modal {
     color: rgba(91, 91, 91, 0.768);
@@ -542,14 +543,12 @@ footer {
     padding-bottom: 0;
 }
 
-
 .modal-title {
     flex-grow: 1;
     text-align: center;
     margin-right: -20px; 
     
 }
-
 
 .modal-title,
 .section-title {
@@ -581,9 +580,51 @@ footer {
     list-style-type: disc;
 }
 
-.section {
-    margin-bottom: 1rem; /* Space between sections */
+
+.cv-content {
+    height: calc(90vh - 170px);
 }
+
+.cv-col {
+    background-color: #f8f9fa; 
+    height: 100%; 
+    overflow-y: auto;
+    padding: 20px;
+    min-height: 200px; 
+    max-height: 600px;
+    overflow-y: auto; 
+    background-color: transparent;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+}
+
+.cv-nav {
+    background-color: #ffffff; 
+    height: 100%; 
+    overflow-y: auto; 
+    background-color: transparent;
+    padding: 5px;
+
+
+
+}
+
+custom-scrollbar::-webkit-scrollbar {
+    display: none; 
+}
+
+/* Firefox */
+.custom-scrollbar {
+    scrollbar-width: none; 
+}
+
+/* IE and Edge */
+.custom-scrollbar {
+    -ms-overflow-style: none; 
+}
+
+
 
 
 
@@ -717,6 +758,33 @@ footer {
 
 
 
+/* Fade  */
+
+ /* Create the fade effect on the left side */
+ .fade-left::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--fade-width);
+    height: 100%;
+    background: linear-gradient(to right, var(--primary-background-color), transparent);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Create the fade effect on the right side */
+.fade-right::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: var(--fade-width);
+    height: 100%;
+    background: linear-gradient(to left, var(--primary-background-color), transparent);
+    pointer-events: none;
+    z-index: 9999;
+}
 
 
 /* General styles for debugging */

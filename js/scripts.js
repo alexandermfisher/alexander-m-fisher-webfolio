@@ -36,12 +36,9 @@ document.querySelector('.scroll-button').addEventListener('click', function() {
 });
 
 
-
-
-const scrollButton = document.querySelector('#scrollToProjects');
-if (scrollButton) {
+if (document.querySelector('#scrollToProjects')) {
     // Add event listener only if the scroll button exists
-    scrollButton.addEventListener('click', function() {
+    document.querySelector('#scrollToProjects').addEventListener('click', function() {
         const navbarHeight = document.querySelector('.navbar').offsetHeight;
         const projectsSection = document.getElementById('projects');
         const sectionPosition = projectsSection.getBoundingClientRect().top + window.pageYOffset;
@@ -53,6 +50,22 @@ if (scrollButton) {
         });
     });
 }
+
+if (document.querySelector('#scrollToCV')) {
+    // Add event listener only if the scroll button exists
+    document.querySelector('#scrollToCV').addEventListener('click', function() {
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const projectsSection = document.getElementById('cv');
+        const sectionPosition = projectsSection.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = sectionPosition - navbarHeight;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+}
+
 
 
 
