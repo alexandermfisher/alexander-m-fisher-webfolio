@@ -35,71 +35,52 @@ document.querySelector('.scroll-button').addEventListener('click', function() {
     });
 });
 
+// JavaScript for scroll buttons on specific pages
+const scrollToProjectsButton = document.querySelector('#scrollToProjects');
+if (scrollToProjectsButton) {
+    scrollToProjectsButton.addEventListener('click', function() {
+        scrollToSection('projects');
+    });
+}
 
-if (document.querySelector('#scrollToProjects')) {
-    // Add event listener only if the scroll button exists
-    document.querySelector('#scrollToProjects').addEventListener('click', function() {
-        const navbarHeight = document.querySelector('.navbar').offsetHeight;
-        const projectsSection = document.getElementById('projects');
-        const sectionPosition = projectsSection.getBoundingClientRect().top + window.pageYOffset;
+const scrollToCVButton = document.querySelector('#scrollToCV');
+if (scrollToCVButton) {
+    scrollToCVButton.addEventListener('click', function() {
+        scrollToSection('cv');
+    });
+}
+function scrollToSection(sectionId) {
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+    const section = document.getElementById(sectionId);
+    if (section) {
+        const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
         const offsetPosition = sectionPosition - navbarHeight;
-
         window.scrollTo({
             top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+const backToTopButton = document.getElementById('backToTopButton');
+if (backToTopButton) {
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
             behavior: 'smooth'
         });
     });
 }
 
-if (document.querySelector('#scrollToCV')) {
-    // Add event listener only if the scroll button exists
-    document.querySelector('#scrollToCV').addEventListener('click', function() {
-        const navbarHeight = document.querySelector('.navbar').offsetHeight;
-        const projectsSection = document.getElementById('cv');
-        const sectionPosition = projectsSection.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = sectionPosition - navbarHeight;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    });
-}
-
-
-
-
-document.querySelectorAll('.about-nav .nav-link').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        const navbarHeight = document.querySelector('.navbar').offsetHeight;
-        const offsetPosition = targetElement.offsetTop - navbarHeight;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    });
+// JavaScript to apply colors to the buttons
+document.querySelectorAll('.card').forEach(card => {
+    const primaryColor = card.getAttribute('data-color-primary');
+    const secondaryColor = card.getAttribute('data-color-secondary');
+    card.querySelector('.btn-primary').style.backgroundColor = primaryColor;
+    card.querySelector('.btn-secondary').style.backgroundColor = secondaryColor;
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        const navbarHeight = document.querySelector('.navbar').offsetHeight;
-        const offsetPosition = targetElement.offsetTop - navbarHeight;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll('.about-content');
@@ -128,20 +109,35 @@ document.addEventListener("DOMContentLoaded", function () {
     onScroll(); 
 });
 
-document.getElementById('backToTopButton').addEventListener('click', function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll('.cv-section');
+    const navLinks = document.querySelectorAll('.cv-nav .nav-item');
+    const cvNav = document.querySelector('.cv-nav');
+    const cvCol = document.querySelector('.cv-col');
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+    function onScroll() {
+        let scrollPos = cvCol.scrollTop;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - navbarHeight - cvNav.offsetHeight;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                // Remove active class from all nav links
+                navLinks.forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                // Find the corresponding nav link and add active class
+                const correspondingNavLink = document.querySelector(`.cv-nav .nav-item[href="#${section.id}"]`);
+                if (correspondingNavLink) {
+                    correspondingNavLink.classList.add('active');
+                }
+            }
+        });
+    }
+
+    cvCol.addEventListener('scroll', onScroll);
+    onScroll(); 
 });
-
-// JavaScript to apply colors to the buttons
-document.querySelectorAll('.card').forEach(card => {
-    const primaryColor = card.getAttribute('data-color-primary');
-    const secondaryColor = card.getAttribute('data-color-secondary');
-    card.querySelector('.btn-primary').style.backgroundColor = primaryColor;
-    card.querySelector('.btn-secondary').style.backgroundColor = secondaryColor;
-});
-
-
-
